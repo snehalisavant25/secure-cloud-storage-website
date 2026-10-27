@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Cloud File Storage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef3f9;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+        h1, h2 {
+            color: #173b67;
+        }
+        .card {
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #d5dfeb;
+            border-radius: 8px;
+        }
+        input, button {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+        }
+        button {
+            background: #1769aa;
+            color: white;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .message {
+            background: #e4f6e9;
+            padding: 12px;
+            border-radius: 5px;
+            overflow-wrap: anywhere;
+        }
+        .note {
+            color: #526477;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Secure Cloud File Storage</h1>
+        <p>Upload files in encrypted blocks to Amazon S3 and securely reconstruct them during download.</p>
+
+        {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+                <p class="message">{{ message }}</p>
+            {% endfor %}
+        {% endwith %}
+
+        <div class="card">
+            <h2>Upload File</h2>
+            <form method="POST" action="/" enctype="multipart/form-data">
+                <input type="file" name="file" required>
+                <button type="submit">Encrypt and Upload</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Download File</h2>
+            <form method="POST" action="/download">
+                <input type="text" name="file_id" placeholder="Enter your File ID" required>
+                <button type="submit">Download and Decrypt</button>
+            </form>
+        </div>
+
+        <p class="note">Keep your File ID and encryption key safe. This prototype runs locally.</p>
+    </div>
+</body>
+</html>

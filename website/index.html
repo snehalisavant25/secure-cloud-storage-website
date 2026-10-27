@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Cloud File Storage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f6fc;
+            color: #26364a;
+            line-height: 1.6;
+        }
+        header {
+            background: #173b67;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+        header h1 {
+            margin-bottom: 10px;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #1769aa;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #526477;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Secure Cloud File Storage</h1>
+        <p>Encrypted File Blocks, Amazon S3 and CloudFront CDN</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Project Overview</h2>
+            <p>This project provides a secure approach to cloud file storage by dividing files into smaller blocks, encrypting them, and storing them in Amazon S3.</p>
+        </section>
+
+        <section>
+            <h2>Objectives</h2>
+            <ul>
+                <li>Divide files into smaller blocks.</li>
+                <li>Encrypt blocks using AES-GCM before cloud upload.</li>
+                <li>Store encrypted blocks in Amazon S3.</li>
+                <li>Download, decrypt, and reconstruct the original file.</li>
+                <li>Use CloudFront CDN with HTTPS for website delivery.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Technologies Used</h2>
+            <ul>
+                <li>Python and Flask</li>
+                <li>Amazon S3</li>
+                <li>AES-GCM encryption</li>
+                <li>AWS CloudFront</li>
+                <li>HTML and CSS</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>System Workflow</h2>
+            <p>Select File → Divide into Blocks → Encrypt Blocks → Upload to Amazon S3 → Download Encrypted Blocks → Decrypt → Reconstruct Original File.</p>
+        </section>
+
+        <section>
+            <h2>Security Features</h2>
+            <ul>
+                <li>Encryption before uploading files to cloud storage.</li>
+                <li>Private Amazon S3 storage.</li>
+                <li>HTTPS delivery for the documentation website through CloudFront.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Secure Cloud File Storage — Student Mini Project</p>
+    </footer>
+</body>
+</html>
